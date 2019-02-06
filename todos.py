@@ -4,7 +4,6 @@
 
 #Look up the datetime module
 
-
 class Item(object):
     pass
     #1) A timestamp of when they were created.
@@ -12,16 +11,31 @@ class Item(object):
     #3) And the text of the actual to-do item.
 
 class Manager(object):
-    pass
+
+    def print():
+        pass
+
+    def add(input):
+        a = open("todos.txt","a")
+        a.write(input + "\n")
+        a.close()
+
+    def done():
+        pass
     #1) Print all of the to-do items in the list.
     #2) Add a new item to the list.
     #3) Mark an item as completed.
 
-lines = [] #Declare an empty list named "lines"
+lines = []
 
-f = open("todos.txt","rt")
-for line in f:
-    lines.append(line)
-    print(lines)
+def yo():
+    in_file = open("todos.txt", "rt")
+    for line in in_file:
+        lines.append(line)
+yo()
+print(lines)
 
-print(lines[3])    
+#lines = []
+
+#Manager.add('zero')
+#print(lines[1])
