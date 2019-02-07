@@ -1,3 +1,4 @@
+import datetime
 #Each class should be in its own module which you will need to import accordingly
 
 #how to store data in the file
@@ -6,19 +7,24 @@
 
 class Item(object):
     pass
-    #1) A timestamp of when they were created.
+    #1$) A timestamp of when they were created.
     #2) A boolean marking the item as completed or not.
-    #3) And the text of the actual to-do item.
+    #3$) And the text of the actual to-do item.
+    def add(input):
+        a = open("todos.txt","a")
+        a.write(f"{length}. " + input + " started @ "+ time + "\n")
+        a.close()
 
 class Manager(object):
 
     def print():
-        pass
+        for i in range(0,len(lines)):
+            print(lines[i])
 
-    def add(input):
-        a = open("todos.txt","a")
-        a.write(input + "\n")
-        a.close()
+    def update():
+        a = open("todos.txt", "rt")
+        for line in a:
+            lines.append(line)
 
     def done():
         pass
@@ -28,14 +34,11 @@ class Manager(object):
 
 lines = []
 
-def yo():
-    in_file = open("todos.txt", "rt")
-    for line in in_file:
-        lines.append(line)
-yo()
-print(lines)
+time = str(datetime.datetime.now())
+length = len(lines)
 
-#lines = []
+Item.add('yo dude')
+Manager.update()
+#Manager.print()
 
-#Manager.add('zero')
 #print(lines[1])
