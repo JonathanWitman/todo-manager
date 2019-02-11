@@ -1,9 +1,8 @@
 import manager
 
-
 class Item(object):
     def check(input):
-        value = manager.lines[input - 1]
+        value = manager.Var.lines[input - 1]
         if value.startswith("DONE!!"):
             print("this item is done")
         else:
@@ -13,7 +12,6 @@ class Item(object):
         print("What are you adding to the list?")
         inp = input("> ")
         a = open("todos.txt","a")
-        a.write(f"{len(manager.lines) + 1}. " + inp + " started @ "+ manager.time + "\n")
+        print(manager.Var.lines)
+        a.write(f"{len(manager.Var.lines) + 1}. " + inp + " started @ "+ manager.Var.time + "\n")
         a.close()
-
-#{len(manager.lines) + 1}.

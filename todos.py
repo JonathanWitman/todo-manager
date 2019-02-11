@@ -1,8 +1,6 @@
 import manager
 import item
 
-lines = manager.lines
-time = manager.time
 #Each class should be in its own module which you will need to import accordingly
 
 #how to store data in the file
@@ -30,8 +28,7 @@ def begin():
     elif inp == "check":
         pass
 
-#begin()
-print(manager.lines)
+begin()
 
 #**update moves items from txt into list
 #Manager.update()
