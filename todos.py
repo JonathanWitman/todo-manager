@@ -25,6 +25,8 @@ def begin():
         manager.Manager.print()
         input('')
         begin()
+    elif inp == "done":
+        manager.Manager.done()
     elif inp == "check":
         pass
 
