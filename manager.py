@@ -10,9 +10,11 @@ class Manager(object):
         open('todos.txt', 'w').close()
 
     def update():
+        item.lines = []
         a = open("todos.txt", "rt")
         for line in a:
             item.lines.append(line)
+        a.close()    
 
     def write():
         Manager.clear()
@@ -28,6 +30,3 @@ class Manager(object):
             item.lines.insert(input - 1, "DONE!! " + current)
             item.lines.remove(current)
             Manager.write()
-
-    def clearlist():
-        lines = []

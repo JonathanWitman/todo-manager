@@ -15,9 +15,9 @@ class Item(object):
     def add():
         print("What are you adding to the list?")
         inp = input("> ")
+        manager.Manager.update()
         a = open("todos.txt","a")
         a.write(f"{len(lines) + 1}. " + inp + " started @ "+ time + "\n")
-        manager.Manager.clearlist()
         manager.Manager.update()
         print(lines)
         a.close()
