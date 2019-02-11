@@ -8,7 +8,6 @@ import item
 #Look up the datetime module
 
 def begin():
-    manager.Manager.update()
     print("What's up?")
     print("type 'help' for help")
     inp = input("> ")
@@ -22,6 +21,7 @@ def begin():
         input('')
         begin()
     elif inp == "all":
+        manager.Manager.update()
         manager.Manager.print()
         input('')
         begin()

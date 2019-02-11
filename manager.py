@@ -1,14 +1,10 @@
-import datetime
-
-class Var(object):
-    lines = []
-    time = str(datetime.datetime.now())
+import item
 
 class Manager(object):
 
     def print():
-        for i in range(0,len(Var.lines)):
-            print(Var.lines[i])
+        for i in range(0,len(item.lines)):
+            print(item.lines[i])
 
     def clear():
         open('todos.txt', 'w').close()
@@ -16,7 +12,7 @@ class Manager(object):
     def update():
         a = open("todos.txt", "rt")
         for line in a:
-            Var.lines.append(line)
+            item.lines.append(line)
 
     def write():
         Manager.clear()
@@ -25,10 +21,13 @@ class Manager(object):
             a.write(item)
 
     def done(input):
-        current = Var.lines[input - 1]
+        current = item.lines[input - 1]
         if current.startswith("DONE!!"):
             print('this item is already completed')
         else:
-            Var.lines.insert(input - 1, "DONE!! " + current)
-            Var.lines.remove(current)
+            item.lines.insert(input - 1, "DONE!! " + current)
+            item.lines.remove(current)
             Manager.write()
+
+    def clearlist():
+        lines = []
