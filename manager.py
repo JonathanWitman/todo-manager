@@ -20,14 +20,16 @@ class Manager(object):
     def write():
         Manager.clear()
         a = open("todos.txt", "w")
-        for item in item.lines:
-            a.write(item)
+        for i in item.lines:
+            a.write(i)
+        a.close()
 
     def done():
         print("Which item do you want to mark completed? Please use the numerical value to select an item.")
         Manager.print()
         inp = int(input("> "))
         current = item.lines[inp - 1]
+        print(current)
         if current.startswith("DONE!!"):
             print('this item is already completed')
         else:

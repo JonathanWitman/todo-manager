@@ -27,8 +27,15 @@ def begin():
         begin()
     elif inp == "done":
         manager.Manager.done()
+        begin()
     elif inp == "check":
-        pass
+        item.Item.check()
+        begin()
+    elif inp == "quit":
+        print("Bye my guy \n")
+    else:
+        print("huh?? I don't know what you're saying. \n")
+        begin()
 
 begin()
 
